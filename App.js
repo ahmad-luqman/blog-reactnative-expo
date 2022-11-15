@@ -1,3 +1,4 @@
+import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 
@@ -6,6 +7,8 @@ import IndexScreen from "./src/screens/IndexScreen";
 // import ShowScreen from "./src/screens/ShowScreen";
 // import CreateScreen from "./src/screens/CreateScreen";
 // import EditScreen from "./src/screens/EditScreen";
+
+import { BlogProvider } from "./src/context/BlogContext";
 
 // Create a stack navigator
 const navigator = createStackNavigator(
@@ -24,4 +27,13 @@ const navigator = createStackNavigator(
 );
 
 // Create an app container
-export default createAppContainer(navigator);
+const App = createAppContainer(navigator);
+
+// Export the app container
+export default () => {
+  return (
+    <BlogProvider>
+      <App />
+    </BlogProvider>
+  );
+};
