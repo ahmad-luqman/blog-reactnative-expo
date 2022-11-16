@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Context } from "../context/BlogContext";
 
-const IndexScreen = ({ navigation }) => {
+const ShowScreen = ({ navigation }) => {
   const { state } = useContext(Context);
 
   const blogPosts = state.find(
@@ -18,4 +18,4 @@ const IndexScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({});
 
-export default IndexScreen;
+export default ShowScreen;
