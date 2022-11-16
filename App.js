@@ -8,7 +8,7 @@ import IndexScreen from "./src/screens/IndexScreen";
 // import CreateScreen from "./src/screens/CreateScreen";
 // import EditScreen from "./src/screens/EditScreen";
 
-import { BlogProvider } from "./src/context/BlogContext";
+import { Provider } from "./src/context/BlogContext";
 
 // Create a stack navigator
 const navigator = createStackNavigator(
@@ -32,8 +32,8 @@ const App = createAppContainer(navigator);
 // Export the app container
 export default () => {
   return (
-    <BlogProvider>
+    <Provider>
       <App />
-    </BlogProvider>
+    </Provider>
   );
 };
